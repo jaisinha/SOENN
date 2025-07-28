@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.message-box{
+  scroll-behavior: smooth;
+}
+.message-box::-webkit-scrollbar{
+  display: none;
+}
+
+
+.markdown-content pre {
+  white-space: pre-wrap; /* wrap long code lines */
+  overflow-wrap: break-word;
+  max-width: 100%;
+  background-color: #f8fafc;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  overflow-x: auto;
+}
+
+.markdown-content code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.tab-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Ensures container takes full width */
+  background-color: #d7dee7; /* Mid-column background color */
+}
+
+.tab {
+  padding: 0.5rem 1rem;
+  background-color: inherit; /* Inherits from container */
+  width: 100%;               /* Make tab full width */
+  border-bottom: 1px solid #ccc; /* Optional: adds divider */
+  font-weight: bold;
+}
+
