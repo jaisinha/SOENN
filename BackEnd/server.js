@@ -6,7 +6,7 @@ import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
 import Project from "./models/project.model.js";
 const server = http.createServer(app);
-const port = process.env.PORT || 3000;
+const   port = process.env.PORT || 3000;
 import aiService from "./services/ai.services.js";
 const io = new Server(server, {
   cors: {

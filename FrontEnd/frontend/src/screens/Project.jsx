@@ -126,7 +126,7 @@ const Project = () => {
     const token = localStorage.getItem("token");
 
     axios
-      .get(`http://localhost:8080/project/get-project/${project._id}`, {
+      .get(`https://soen-3.onrender.com/project/get-project/${project._id}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -140,7 +140,7 @@ const Project = () => {
       });
 
     axios
-      .get("http://localhost:8080/user/all", {
+      .get("https://soen-3.onrender.com/user/all", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setUsers(res.data.users))
@@ -188,8 +188,8 @@ const Project = () => {
     const token = localStorage.getItem("token");
     axios
       .put(
-        "http://localhost:8080/project/add-user",
-        { 
+        "https://soen-3.onrender.com/project/add-user",
+        {
           projectId: location.state.project._id,
           users: Array.from(selectedUserId),
         },
@@ -202,7 +202,7 @@ const Project = () => {
         console.log(err);
       });
   };
- 
+
   const send = () => {
     sendMessage("project-message", {
       message,
