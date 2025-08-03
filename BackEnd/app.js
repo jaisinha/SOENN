@@ -9,7 +9,7 @@ import cors from "cors";
 import projectRoutes from "./routes/project.routes.js";
 import aiRoutes from "./routes/ai.routes.js";
 const corsOptions = {
-  origin: "https://reliable-meerkat-bce70e.netlify.app",
+  origin: "https://dainty-cuchufli-249642.netlify.app",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true,
   allowedHeaders: ["Content-Type", "Authorization"], // Add allowed headers explicitly if needed
