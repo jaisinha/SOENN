@@ -3,9 +3,11 @@ import * as userService from "../services/user.services.js";
 import { validationResult } from "express-validator";
 import redisClient from "../services/redis.services.js";
 export const createUserController = async (req, res) => {
-  const errors = validationResult(req);
+    console.log("BODY:", req.body); // Debug log
 
+  const errors = validationResult(req);
   if (!errors.isEmpty()) {
+    console.log("Validation errors:", errors.array()); // 💡 Log exact validation issues
     return res.status(400).json({ errors: errors.array() });
   }
 
