@@ -8,8 +8,15 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import projectRoutes from "./routes/project.routes.js";
 import aiRoutes from "./routes/ai.routes.js";
+const corsOptions = {
+  origin: "https://glittering-palmier-4690f7.netlify.app",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  credentials: true,
+  allowedHeaders: ["Content-Type", "Authorization"], // Add allowed headers explicitly if needed
+  optionsSuccessStatus: 200, // Some legacy browsers (IE11, some Android browsers) choke on 204
+};
 
-app.use(cors());
+app.use(cors(corsOptions));
 connect();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
