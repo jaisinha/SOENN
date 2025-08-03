@@ -10,6 +10,7 @@ export const createUserController = async (req, res) => {
   }
 
   try {
+    console.log(req.body);
     const user = await userService.createUser(req.body);
 
     const token = await user.generateJWT();
